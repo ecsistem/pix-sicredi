@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  pix-sicredi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - CLIENT_ID=${CLIENT_ID}
+      - CLIENT_SECRET=${CLIENT_SECRET}
+      - CRT_FILE=${CRT_FILE}
+      - KEY_FILE=${KEY_FILE}
+      - PASS=${PASS}
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped

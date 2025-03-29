@@ -20,3 +20,6 @@ build/
 
 # Token
 token.txt
+
+# Docker
+docker-compose.override.yml

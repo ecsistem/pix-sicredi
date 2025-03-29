@@ -61,6 +61,24 @@ PASS="" # senha do certificado, se necessário
   npm start
   ```
 
+## Executando com Docker
+
+1. Certifique-se de que o Docker e o Docker Compose estão instalados em sua máquina.
+
+2. Configure o arquivo `.env` com as variáveis de ambiente necessárias.
+
+3. Construa e inicie o container:
+   ```bash
+   docker-compose up --build
+   ```
+
+4. Acesse a API em `http://localhost:3000`.
+
+5. Para parar os containers:
+   ```bash
+   docker-compose down
+   ```
+
 ## Endpoints da API
 
 ### Health Check
